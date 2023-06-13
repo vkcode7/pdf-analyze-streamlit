@@ -1,0 +1,37 @@
+# To create venv use:
+# conda create -n pdf-analyze
+#
+# To activate this environment, use
+#
+#     $ conda activate pdf-analyze
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+environment location: /Users/gs/anaconda3/envs/pdf-analyze
+
+#
+#  Install via `conda` directly.
+#  This will fail to install all
+#  dependencies. If one fails,
+#  all dependencies will fail to install.
+#
+conda install --yes --file requirements.txt
+
+#
+#  To go around issue above, one can
+#  iterate over all lines in the
+#  requirements.txt file.
+#
+while read requirement; do conda install --yes $requirement; done < requirements.txt
+
+
+How to install requirements txt using anaconda?
+Python Create Requirements. txt
+$ pip freeze > requirements.txt.
+$ conda list -e > requirements.txt.
+$ conda install pip.
+$ pip install -r requirements.txt.
+$ conda create --name <environment_name> --file requirements.txt.
+$ conda install --file requirements.txt.
